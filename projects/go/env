@@ -1,5 +1,6 @@
 source ../../env
 
+TAGS="tip weekly release"
 PROJECT=go
 PROJECT_ROOT=${LANDSCAPE_ROOT}/projects/${PROJECT}
 GOARCH=amd64

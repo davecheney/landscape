@@ -1,9 +1,6 @@
 #!/bin/bash
 
-source ../../env
-
-TAG=tip
-WORKSPACE=${PROJECT_ROOT}/tags/${TAG}/workspace
+WORKSPACE=${TAG_DIR}/workspace
 GOROOT=${WORKSPACE}
 GOBIN=${GOROOT}/bin
 PATH=${PATH}:${GOBIN}
