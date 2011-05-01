@@ -1,0 +1,16 @@
+#!/bin/bash
+
+source ../../../../env
+
+PROJECT=goprotobuf
+PROJECT_ROOT=${LANDSCAPE_ROOT}/projects/${PROJECT}
+PROTOBUF_HOME=/opt/protobuf/current
+PATH=${PATH}:${PROTOBUF_HOME}/bin
+
+function build-number() {
+        hg identify $WORKSPACE -n
+}
+
+export -f build-number
+
+export PATH

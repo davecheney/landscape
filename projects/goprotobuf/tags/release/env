@@ -1,0 +1,8 @@
+#!/bin/bash
+
+source ../../env
+
+TAG=release
+WORKSPACE=${PROJECT_ROOT}/tags/${TAG}/workspace
+
+export WORKSPACE
