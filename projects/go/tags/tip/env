@@ -1,8 +1,10 @@
 #!/bin/bash
 
-WORKSPACE=${TAG_DIR}/workspace
-GOROOT=${WORKSPACE}
+source ../../env
+
+TAG=tip
+GOROOT=$(workspace)
 GOBIN=${GOROOT}/bin
 PATH=${PATH}:${GOBIN}
 
-export WORKSPACE GOROOT PATH
+export GOROOT PATH

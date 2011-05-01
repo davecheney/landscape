@@ -10,6 +10,9 @@ function build-number() {
 	hg identify $WORKSPACE -n
 }
 
+function build-dependents() {
+	
+
 export -f build-number
 BUILD_DIR=$TAG_DIR/builds/$(build-number)
 mkdir -p $BUILD_DIR

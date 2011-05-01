@@ -1,3 +1,30 @@
 LANDSCAPE_ROOT=/home/dfc/devel/landscape
 
+function panic() {
+	echo "panic: $1" >&2
+	exit 1
+}
+
+function build-dependents() {
+	find $(task-root)/dependents -type s	
+}
+
+function project-root() {
+	echo ${LANDSCAPE_ROOT}/projects/${PROJECT}
+}
+
+function task-root() {
+	panic "task-root not defined"
+}
+
+function build-cmd() {
+	panic "build-cmd not defined"
+}
+
+function workspace() {
+	echo $(task-root)/workspace
+}
+
+export -f build-dependents project-root panic
+
 export LANDSCAPE_ROOT

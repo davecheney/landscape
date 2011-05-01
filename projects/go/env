@@ -1,9 +1,23 @@
-source ../../env
+source ../../../../env
 
 TAGS="tip weekly release"
 PROJECT=go
-PROJECT_ROOT=${LANDSCAPE_ROOT}/projects/${PROJECT}
 GOARCH=amd64
 GOOS=linux
 
-export PROJECT_ROOT GOARCH GOOS
+function build-number() {
+        hg identify $(workspace) -n
+}
+
+function task-root() {
+	echo $(project-root)/tags/$TAG
+}
+
+function build-cmd() {
+        cd $(workspace)/src
+        bash make.bash
+}
+
+export -f build-number build-cmd task-root
+
+export GOARCH GOOS
