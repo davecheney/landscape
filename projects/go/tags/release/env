@@ -1,0 +1,11 @@
+#!/bin/bash
+
+source ../../env
+
+TAG=release
+WORKSPACE=${PROJECT_ROOT}/tags/${TAG}/workspace
+GOROOT=${WORKSPACE}
+GOBIN=${GOROOT}/bin
+PATH=${PATH}:${GOBIN}
+
+export WORKSPACE GOROOT PATH

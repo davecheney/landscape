@@ -1,0 +1,3 @@
+LANDSCAPE_ROOT=/home/dfc/devel/landscape
+
+export LANDSCAPE_ROOT

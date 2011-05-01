@@ -1,0 +1,8 @@
+source ../../../../env
+
+PROJECT=go
+PROJECT_ROOT=${LANDSCAPE_ROOT}/projects/${PROJECT}
+GOARCH=amd64
+GOOS=linux
+
+export PROJECT_ROOT GOARCH GOOS
