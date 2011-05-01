@@ -1,4 +1,4 @@
-source ../../../../env
+source ../../env
 
 PROJECT=go
 PROJECT_ROOT=${LANDSCAPE_ROOT}/projects/${PROJECT}
